@@ -1,0 +1,106 @@
+html {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.emoji {
+    height: 1em;
+    width: 1em;
+}
+
+.label {
+    font-weight: bold;
+}
+
+ul.sm {
+    list-style-type: none;
+}
+
+.centerer {
+    margin: 0 auto;
+}
+
+.main {
+    background-image: url(images/greengrid.png);
+}
+
+.trivia {
+    background-image: url(images/purplegrid.png);
+}
+
+.trivia pre code {
+    width: 50%;
+}
+
+.main table {
+    border-collapse: collapse;
+}
+
+.main td {
+    border: 2px solid black;
+    text-align: center;
+    padding: 4px 8px;
+    font-size: 120%;
+}
+
+.trivia .answer {
+    font-weight: bold;
+    color: maroon;
+}
+
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 100%;
+    }
+    .centerer {
+        width: 100%;
+    }
+    .trivia pre code {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 110%;
+    }
+    .centerer {
+        width: 80%;
+    }
+    pre.centerer {
+        width: 100%;
+    }
+    .trivia pre code {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    html {
+        font-size: 130%;
+    }
+    .centerer {
+        width: 60%;
+    }
+    pre.centerer {
+        width: 90%;
+    }
+    .trivia pre code {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    html {
+        font-size: 140%;
+    }
+    .centerer {
+        width: 50%;
+    }
+    pre.centerer {
+        width: 90%;
+    }
+    .trivia pre code {
+        width: 80%;
+    }
+}
+
