@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Trivia for Monday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/monokai.css">
+    <script src="js/spoiler.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        document.addEventListener("DOMContentLoaded", () => {
+            spoilerAlert('.spoiler', {max: 13, partial: 11, hintText: 'Click to reveal'});
+        });
+    </script>
+</head>
+<body class="trivia">
+<div class="centerer">
+    <h1>Monday Trivia</h1>
+    <p>Give these trivia questions a try. Click the blurry text to see the answers.</p>
+    <ol>
+        <li>
+            The Gopher protocol was a precursor to the World Wide Web. At what American university was Gopher invented.
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">University of Minnesota</span></p>
+
+                <p class="details">The protocol was named for the the University of Minnesota's mascot, the Golden
+                    Gophers. The Gopher protocol was menu based and designed primarily for text based terminals and
+                    was mostly made obsolete the multimedia capabilities of the web.</p>
+            </div>
+        </li>
+        <li>
+            BASIC was the first computer language of many programmers in the 1970s and 1980s. What does the the 'B' in
+            BASIC stand for?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">Beginners'</span></p>
+
+                <p class="details">BASIC stands for Beginners' All Purpose Symbolic Instruction Code. It was designed
+                    by John G. Kemeny and Thomas E. Kurtz and released at Dartmouth College in 1964.</p>
+            </div>
+        </li>
+        <li>
+            One of the first ever hand held computers was released by Apple in 1993 and named for what physicist and
+            mathematician?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">Sir Isaac Newton</span></p>
+
+                <p class="details">The phrase "personal digital assistant" (PDA) was first used to describe the Apple
+                    Newton. Even though the Newton had some advanced features like handwriting recognition, it never
+                    really took off. Still, in many ways the Newton paved the way for devices like the smart phones
+                    and tablets.</p>
+            </div>
+        </li>
+        <li>
+            What number should replace the <code>XX</code> so this LOGO code will instruct the turtle to draw a hexagon?
+
+            <pre><code class="language-python">
+repeat 6 [fd 50 rt XX]
+            </code></pre>
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">60</span></p>
+
+                <p class="details">When drawing a closed figure, the turtle needs to make a complete turn or 360&deg;
+                    Since a hexagon has six sides, that means at each corner the turtle must turn 360 &div; 6
+                    or 60&deg;</p>
+            </div>
+        </li>
+    </ol>
+    <div class="footer">Return to <a href="/csedweek2020/">main page</a>.</div>
+</div>
+</body>
+</html>
