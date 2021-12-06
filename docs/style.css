@@ -27,6 +27,10 @@ ul.sm {
     background-image: url(images/purplegrid.png);
 }
 
+.post {
+    background-image: url(images/bluecubes.jpg);
+}
+
 .trivia pre code {
     width: 50%;
 }
@@ -45,6 +49,27 @@ ul.sm {
 .trivia .answer {
     font-weight: bold;
     color: maroon;
+}
+
+.sandboxes {
+    border-collapse: collapse;
+}
+
+.sandboxes td {
+    border: 1px solid black;
+}
+
+.sandboxes td.link {
+    text-align: center;
+}
+
+.sandboxes td.link, .sandboxes td.desc {
+    padding: 6px;
+}
+
+.sandboxes .language {
+    text-align: center;
+    font-weight: bold;
 }
 
 @media only screen and (min-width: 600px) {
