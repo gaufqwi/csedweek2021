@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Trivia for Monday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/monokai.css">
+    <script src="js/spoiler.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        document.addEventListener("DOMContentLoaded", () => {
+            spoilerAlert('.spoiler', {max: 13, partial: 11, hintText: 'Click to reveal'});
+        });
+    </script>
+</head>
+<body class="trivia">
+<div class="centerer">
+    <h1>Tuesday Trivia</h1>
+    <p>Give these trivia questions a try. Click the blurry text to see the answers.</p>
+    <ol>
+        <li>
+            What English computer scientist is considered the inventor of the World Wide Web?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">Tim Berners-Lee</span></p>
+
+                <p class="details">Berners-Lee invented the web in 1989. He wrote the first browser in 1990 while
+                    employed at CERN near Geneva, Switzerland. The first website, which was about the web itself, was
+                    published on 20 December 1990.</p>
+            </div>
+        </li>
+        <li>
+            What computer language is named for a 17th century French mathematician? This man also lends his name to
+            a famous triangle that is important in mathematics.
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">Pascal</span></p>
+
+                <p class="details">The Pascal programming language was designed by Niklaus Wirth. Popular in the
+                    1970s, it has largely been replaced by C. The triangle mentioned is called Pascal's Triangle,
+                    named for mathematician Blaise Pascal.</p>
+            </div>
+        </li>
+        <li>
+            Almost all modern computer chips are made primarily from what chemical element with atomic number 14?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">Silicon</span></p>
+
+                <p class="details">Silicon is a semiconductor, meaning that it can transmit an electrical current, but
+                    not as easily as a metal. By adding small amounts of other elements to a silicon chip, engineers
+                    can change its properties to create switches and other types of circuits.</p>
+            </div>
+        </li>
+        <li>
+            What string does the Javascript code below print?
+
+            <pre><code class="language-javascript">
+console.log('3' + '5')
+            </code></pre>
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer"><code>35</code></span></p>
+
+                <p class="details"><code>'3'</code> and <code>'5'</code> may look like the numbers 3 and 5, but because they are in quotes they are actually strings. In Javascript, the <code>+</code> operator applied to two strings concatenates them, i.e. joins them together. That is true even if the strings happen to look like numbers.</p>
+            </div>
+        </li>
+    </ol>
+    <div class="footer">Return to <a href="/csedweek2021/">main page</a>.</div>
+</div>
+
+</body>
+</html>
