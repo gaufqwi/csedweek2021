@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Trivia for Wednesday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/monokai.css">
+    <script src="js/spoiler.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        document.addEventListener("DOMContentLoaded", () => {
+            spoilerAlert('.spoiler', {max: 13, partial: 11, hintText: 'Click to reveal'});
+        });
+    </script>
+</head>
+<body class="trivia">
+<div class="centerer">
+    <h1>Wednesday Trivia</h1>
+    <p>Give these trivia questions a try. Click the blurry text to see the answers.</p>
+    <ol>
+        <li>
+            Edsger Dijkstra, Guido van Rossum, and Andrew Tanenbaum are all computer scientists who were either born
+            in or spent most of their careers in what country?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">The Netherlands</span></p>
+
+                <p class="details">Dijkstra invented a key algorithm for finding shortest paths through a network
+                    (like a road system or a maze). van Rossum invented Python. Tanenbaum did important work with
+                    operating systems.</p>
+            </div>
+        </li>
+        <li>
+            What language created by Yukihiro Matsumoto can be extended with packages of code called "gems"?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">Ruby</span></p>
+
+                <p class="details">Ruby was developed in Japan in the 1990s. According to the creator,
+                    it was influenced by Perl, Smalltalk, Eiffel, Ada, BASIC, and Lisp.</p>
+            </div>
+
+        </li>
+
+        <li>
+            What decimal number is equivalent to the hexadecimal number 3B?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">59</span></p>
+
+                <p class="details">Hexadecimal is based on powers of 16, so the 3 in 3A represents 3 sixteens instead
+                    of three tens. The letters A - F are used to represent digits greater than 9, so A is 10 and B is
+                    11. So 3B = 3 &times; 16 + 11 &times; 1 = 48 + 11 = 59.</p>
+            </div>
+        </li>
+        <li>
+            What list is produced by the Python expression below?
+
+            <pre><code class="language-python">
+list(range(2, 11, 3))
+            </code></pre>
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer"><code>[2, 5, 8]</code></span></p>
+
+                <p class="details">The first argument to <code>range()</code> is the first element in the list. The
+                    last argument is how much to add each time to get the next element. The second argument is the
+                    upper limit of the list, but is never part of the list itself; <code>range()</code> only makes
+                    list items strictly less than that value.</p>
+            </div>
+        </li>
+    </ol>
+    <div class="footer">Return to <a href="/csedweek2020/">main page</a>.</div>
+</div>
+
+</body>
+</html>
