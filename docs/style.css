@@ -7,6 +7,10 @@ html {
     width: 1em;
 }
 
+.footer {
+    margin-top: 0.8em;
+}
+
 .label {
     font-weight: bold;
 }
