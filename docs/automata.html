@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cellular Automata</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/hexgridwidget.js"></script>
+    <script src="automata.js"></script>
+    <style>
+        .outerframe {
+            text-align: center;
+        }
+        button {
+            margin: 2px 8px;
+            font-size: 120%;
+        }
+        #hexframe {
+            display: inline-block;
+            /*width: 800px;*/
+            /*height: 800px;*/
+            background-color: white;
+            border: 2px solid black;
+        }
+        /*svg {*/
+        /*    width: 100%;*/
+        /*    height: 100%;*/
+        /*    margin: 0;*/
+        /*    border: 0;*/
+        /*    padding: 0;*/
+        /*}*/
+        .hex {
+            stroke: black;
+            fill: transparent;
+            stroke-width: 1;
+            /*transform: translateX(50%) rotate(-30deg) translateX(-50%);*/
+        }
+
+        .hex.alive {
+            fill: black;
+        }
+    </style>
+</head>
+<body class="post"><div class="centerer">
+
+    <h1>Cellular Automata</h1>
+
+    <p>In the late 1960s mathematician <a href="https://en.wikipedia.org/wiki/John_Horton_Conway">John Horton
+        Conway</a> invented the <a href="https://playgameoflife.com/">Game of Life</a>. The Game of Life isn't really
+        game so much as it is a kind of dynamic model. The idea is that you have a rectangular grid of "cells" that at
+        any given time are either "alive" or "dead". Then over time new cells are born and old ones die, all based on
+        simple rules based on the cell's current state and the state of its neighbors. This type of model is called
+        a <a href="https://en.wikipedia.org/wiki/Cellular_automaton">cellular automaton</a> (plural automata). Even
+        though the rules are simple, cellular automata can produce all kinds of complex and surprising behavior.
+        They can even be used to simulate a general purpose computer!</p>
+
+    <p>I was inspired by one of the <a href="https://adventofcode.com/2020/day/24">old Advent of Code problems</a> to
+        create my own cellular automaton. The problem described a floor made of black and white hexagonal tiles that
+        changed from moment to moment based on the following rules:</p>
+
+    <ul class="rules">
+        <li>Any black tile with zero or more than 2 black tiles immediately adjacent to it is flipped to white.</li>
+        <li>Any white tile with exactly 2 black tiles immediately adjacent to it is flipped to black.</li>
+    </ul>
+
+    <p>You can play with the hex automaton below. Click on the hexes to toggle them between black and white, then
+        click "Run" to see how the pattern evolves according to the rules. It's a pretty simplistic version of the
+        model and it has some limitations. In particular, ideally cellular automata are supposed to have infinite
+        room to grow, but this one can't grow past the edge of the screen. There are still plenty of cells to see
+        some interesting patterns. Give it a try.</p>
+
+    <div class="outerframe">
+        <div id="hexframe"></div><br/>
+        <button id="start">Start</button><button id="stop">Stop</button><button id="reset">Reset</button>
+    </div>
+</div></body>
+</html>

@@ -20,22 +20,20 @@
     <p>Give these trivia questions a try. Click the blurry text to see the answers.</p>
     <ol>
         <li>
-            What is the name of the Finnish-American computer scientist who created the open source Unix-like operating
-            system that is at the core of many web servers, mobile phones, and other devices? He shares his name with
-            both a Nobel prize-winning chemist and a blanket-carrying cartoon character.
+            What is the name of the British-American computer scientist who is the chief designer of the technical
+            computing software Mathematica and whose company runs a computational knowledge engine called Alpha?
 
             <div class="spoiler">
-                <p><span class="label">Answer:</span> <span class="answer">Linus Torvalds</span></p>
+                <p><span class="label">Answer:</span> <span class="answer">Stephen Wolfram</span></p>
 
-                <p class="details">Torvalds started writing the Linux operating system in 1991 as a way to learn
-                about the Intel 386 computer chip. He also wrote the Git version control system that used by
-                developers all over the world.</p>
+                <p class="details">WolframAlpha can solve lots of problems involving science and math. For example,
+                    it can graph equations and give step-by-step solutions to mathematical problems.</p>
             </div>
         </li>
         <li>
             What common business oriented language was based on work done by Admiral Grace Hopper? Important during
-            the 1960s and 1970s, this language is much less widely used today, though some mainframe systems depend
-            n it.
+            the 1960s and 1970s, this language is much less widely used today, though some mainframe systems still
+            depend on it.
 
             <div class="spoiler">
                 <p><span class="label">Answer:</span> <span class="answer">COBOL</span></p>
@@ -46,46 +44,49 @@
             </div>
         </li>
         <li>
-            Many acronyms related to computer networking and the internet end with the letter P. Examples include
-            IP, TCP, DHCP, and HTTP. What word does the letter P stand for in each of these acronyms?
+            A byte is a small unit of computer data, more or less equivalent to a single character. What is half of a
+            byte called?
 
             <div class="spoiler">
-                <p><span class="label">Answer:</span> <span class="answer">protocol</span></p>
+                <p><span class="label">Answer:</span> <span class="answer">a nibble</span></p>
 
-                <p class="details">A protocol is a common set of rules for interacting and communicating shared among
-                a group of people (or computers). These protocols ensure that computers "speak the same language"
-                when they exchange data over the network.</p>
+                <p class="details">The very smallest unit of data a computer can work with is a single binary digit
+                    or "bit". Each bit can be either 0 or 1. There are 8 bits in a byte, so there are four bits in
+                    a nibble.</p>
             </div>
         </li>
         <li>
-            In the complete C program shown below, which of the three functions would be the first (and in fact
-            only) to be called when the program is run?
+            What number is printed out by the C program shown below?
 
             <pre><code class="language-c">
 #include &lt;stdio.h&gt;
-
-init() {
-   printf("Hello, World from init!");
-}
-
-start() {
-   printf("Hello, World from start!");
-}
-
 main() {
-   printf("Hello, World from main!");
+    int i, old, current, previous;
+
+    previous = 0;
+    current = 1;
+
+    for (i = 1; i <= 6; i++) {
+        old = current;
+        current = current + previous;
+        previous = old;
+    }
+    printf("%i", current);
 }
+
             </code></pre>
 
             <div class="spoiler">
-                <p><span class="label">Answer:</span> <span class="answer"><code>main()</code></span></p>
+                <p><span class="label">Answer:</span> <span class="answer"><code>13</code></span></p>
 
-                <p class="details">C, developed by Dennis Ritchie in the early 1970s, is the most popular programming
-                language in the world. The <code>main()</code> function is the entry point for C programs.</p>
+                <p class="details">Each time through the loop the <code>current</code> variable is replaced by its
+                    sum with the previous value. The loop repeats six times, so if you trace through carefully you
+                    will see that <code>current</code> goes through the values of 1, 2, 3, 5, 8, and, finally 13. You
+                    may recognize these numbers as the Fibonacci sequence.</p>
             </div>
         </li>
     </ol>
-    <div class="footer">Return to <a href="/csedweek2020/">main page</a>.</div>
+    <div class="footer">Return to <a href="/csedweek2021/">main page</a>.</div>
 </div>
 
 </body>
