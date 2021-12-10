@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer Science Trivia for Friday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/monokai.css">
+    <script src="js/spoiler.js"></script>
+    <script src="js/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+        document.addEventListener("DOMContentLoaded", () => {
+            spoilerAlert('.spoiler', {max: 13, partial: 11, hintText: 'Click to reveal'});
+        });
+    </script>
+</head>
+<body class="trivia">
+<div class="centerer">
+    <h1>Friday Trivia</h1>
+    <p>Give these trivia questions a try. Click the blurry text to see the answers.</p>
+    <ol>
+        <li>
+            What 18th century mathematician and engineer designed the Difference Engine and the Analytical engine, thought to be the first digital programmable computers?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">Charles Babbage</span></p>
+
+                <p class="details">Babbages "computers" were mechanical, not electronic. Though neither was constructed
+                    during his lifetime, since then working models have been built from his designs.</p>
+            </div>
+        </li>
+        <li>
+            What C-like language with a two letter name was designed at Google in the late 2000s?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">Go</span></p>
+
+                <p class="details">Notable projects written in Go include the Docker and Kubernetes container systems
+                    and CockroachDB, a scalable database.</p>
+            </div>
+
+        </li>
+        <li>
+            Broadly speaking, modern computer processors can be divided into RISC and CISC types. RISC stands for
+            "reduced instruction-set computer". What does CISC stand for?
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">complex instruction-set computer</span></p>
+
+                <p class="details">CISC processors generally support more powerful instructions than RISC processors,
+                    but each instruction might require more time or energy to execute, so it is really impossible to
+                    say that one type is always better than the other.</p>
+            </div>
+        </li>
+        <li>
+            What number will the following Swift program print out?
+
+            <pre><code class="language-swift">
+let numbers = [12, 5, 7, 15, 2, 9]
+var sum = 0
+
+for n in numbers {
+    if n*n > 50 {
+        sum = sum + n
+    }
+}
+print(sum)
+            </code></pre>
+
+            <div class="spoiler">
+                <p><span class="label">Answer:</span> <span class="answer">36</span></p>
+
+                <p class="details">The <code>for</code> loop repeats for each number in the list. Because
+                of the <code>if</code> statement, only the numbers whose square is greater than 50 get added to
+                    <code>sum</code>. So <code>sum</code> will equal 12 + 15 + 9, which is 36.</p>
+            </div>
+        </li>
+    </ol>
+    <div class="footer">Return to <a href="/csedweek2020/">main page</a>.</div>
+</div>
+
+</body>
+</html>
